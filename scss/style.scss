@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+@import './base/mixins';
+@import './base/variables';
+
+.container {
+  width: 1120px;
+  margin: auto;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+@import './blocks/header';
+@import './blocks/promo';
+@import './blocks/categories';
+@import './blocks/product';
+@import './blocks/tovar';
+@import './blocks/discount';
+@import './blocks/sale';
+
+@import './base/media';

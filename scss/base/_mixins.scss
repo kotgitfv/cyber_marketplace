@@ -1,0 +1,81 @@
+@mixin up-animation {
+    cursor: pointer;
+    transition: 0.5s all;
+    &:hover {
+        transform: translate(5px, -5px);
+        box-shadow: -2px 2px 6px 3px #000;
+    }
+}
+
+.shop_btn {
+    padding: 16px 56px;
+    border: 1px solid var(--light);
+    background: none;
+    border-radius: 6px;
+    color: var(--light);
+    transition: 0.3s all; 
+    &:hover {
+        box-shadow: 0 0 20px var(--light); 
+        transform: translateY(-3px);
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+.black_btn {
+    background-color: var(--black);
+    color: var(--light);
+    padding: 12px 64px;
+    border-radius: 8px;
+    max-width: 100%;
+    margin-top: 24px;
+    border: 1.3px solid var(--black);
+    transition: 0.3s all;
+    &:hover {
+        color: var(--black);
+        background: none;
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+.heart {
+    margin-left: auto;
+    font-size: 20px;
+    color: var(--light-gray);
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    &.active {
+        color: red;
+        animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+.shop_btn-black {
+    padding: 16px 56px;
+    border: 1px solid var(--black);
+    background: none;
+    border-radius: 6px;
+    color: var(--black);
+    transition: 0.3s all; 
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px var(--light-gray);
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+}

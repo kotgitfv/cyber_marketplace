@@ -1,0 +1,59 @@
+.discount {
+    padding-block: 80px;
+    .discount__items {
+        .discount__items-content {
+            margin-top: 32px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            .discount__title {
+                color: rgba(0, 0, 0, 1);
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 32px;
+            }
+            .content-card {
+                padding: 24px 16px;
+                border-radius: 8px;
+                background-color: var(--light);
+                padding: 16px 24px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+
+                img {
+                    width: 160px;
+                    height: 160px;
+                }
+            
+                .item__text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                
+                    .content__name {
+                        color: var(--black);
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        text-align: center;
+                    }
+                
+                    .content__value {
+                        color: var(--black);
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 24px;
+                        letter-spacing: 3%;
+                        text-align: center;
+                        margin-top: 16px;
+                    }
+                }
+            }
+
+        }
+    }
+}

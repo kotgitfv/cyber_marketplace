@@ -1,0 +1,55 @@
+.categories {
+    padding-block: 80px;
+    .categories__items {
+        .categories__heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .categories__title {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 32px;
+                letter-spacing: 1%;
+            }
+            .arrows {
+                display: flex;
+                gap: 16px;
+                font-weight: 200;
+                font-size: 9px;
+                cursor: pointer;
+            }
+        }
+        .categories__cards {
+            margin-top: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .card {
+                border-radius: 15px;
+                width: 160px;
+                height: 128px;
+                background: var(--light);
+                border: none;
+                padding: 24px 52px 56px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                h2 {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    text-align: center;
+                    position: absolute;
+                    bottom: 10px;
+                }
+                img {
+                    width: 48px;
+                    height: 48px;
+                }
+                @include up-animation
+            }
+
+        }
+    }
+}
