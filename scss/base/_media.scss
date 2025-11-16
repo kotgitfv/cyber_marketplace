@@ -46,6 +46,7 @@
       }
     }
   }
+}
   .header {
     padding: 12px 60px;
     .header__items {
@@ -88,8 +89,8 @@
     .sale__items {
       height: 240px;
     }
-  }
 }
+
 
 @media screen and (max-width: 992px) {
   .container {
@@ -264,6 +265,7 @@
     }
   }
   .sale {
+    background: url('../img/mobile-bg.png') center center/cover no-repeat;
     height: 380px;
     display: flex;
     flex-direction: column;
