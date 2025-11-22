@@ -15,16 +15,19 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
+        <!-- swiper -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <!-- CSS -->
         <link rel="stylesheet" href="./css/style.min.css">
     </head>
 <body>
+
     <header class="header">
   <div class="header__items">
-    <a href="#"><img src="./img/Logo Vector.png" alt="Logo"></a>
+    <a href="./index.html"><img src="./img/Logo Vector.png" alt=""></a>
 
     <form>
-      <input placeholder="Search" type="search" />
+      <input placeholder="Search" id="search" type="search" />
     </form>
 
     <div class="header__links" id="nav-links">
@@ -54,7 +57,7 @@
                 <div class="promo__mini-title">Pro.Beyond.</div>
                 <h1 class="promo__title">IPhone 14 <span>Pro</span></h1>
                 <p class="promo__subtitle">Created to change everything for the better. For everyone</p>
-                <button class="promo_btn shop_btn">Shop Now</button>
+                <a href="./pages/prewiewPhone.html"><button class="promo_btn shop_btn">Shop Now</button></a>
             </div>
             <img src="./img/promo/promo-Iphone.png" alt="">
         </div>
@@ -221,43 +224,58 @@ Starlight <span>Aluminium</span></div>
     <section class="tovar">
         <div class="tovar__items">
 
-            <div class="tovar__item">
-                <img src="./img/tovar/popular.png" alt="">
-                <div class="texts">
+        <div class="tovar__item">
+            <img src="./img/tovar/popular.png" alt="">
+            <div class="texts">
                 <h2 class="tovar__name">Popular Products</h2>
-                <div class="tovar__text">iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</div>
-                <button class="tovar__btn shop_btn">Shop Now</button>
+                <div class="tovar__text">
+                    iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.
                 </div>
-            </div>
-
-            <div class="tovar__item">
-                <img src="./img/tovar/ipad.png" alt="">
-                <div class="texts">
-                <h2 class="tovar__name">Ipad Pro</h2>
-                <div class="tovar__text">iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</div>
                 <button class="tovar__btn shop_btn">Shop Now</button>
-                </div>
-            </div>
-
-            <div class="tovar__item">
-                <img src="./img/tovar/samsung.png" alt="">
-                <div class="texts">
-                <h2 class="tovar__name">Samsung Galaxy </h2>
-                <div class="tovar__text">iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</div>
-                <button class="tovar__btn shop_btn">Shop Now</button>
-                </div>
-            </div>
-
-            <div class="tovar__item">
-                <img src="./img/tovar/mac.png" alt="">
-                <div class="texts">
-                <h2 class="tovar__name">Macbook Pro</h2>
-                <div class="tovar__text">iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.</div>
-                <button class="tovar__btn shop_btn">Shop Now</button>
-                </div>
             </div>
         </div>
+
+        <div class="tovar__item">
+            <img src="./img/tovar/ipad.png" alt="">
+            <div class="texts">
+                <h2 class="tovar__name">Ipad Pro</h2>
+                <div class="tovar__text">
+                    iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.
+                </div>
+                <button class="tovar__btn shop_btn">Shop Now</button>
+            </div>
+        </div>
+
+        <div class="tovar__item">
+            <img src="./img/tovar/samsung.png" alt="">
+            <div class="texts">
+                <h2 class="tovar__name">Samsung Galaxy</h2>
+                <div class="tovar__text">
+                    iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.
+                </div>
+                <button class="tovar__btn shop_btn">Shop Now</button>
+            </div>
+        </div>
+
+        <div class="tovar__item">
+            <img src="./img/tovar/mac.png" alt="">
+            <div class="texts">
+                <h2 class="tovar__name">Macbook Pro</h2>
+                <div class="tovar__text">
+                    iPad combines a magnificent 10.2-inch Retina display, incredible performance, multitasking and ease of use.
+                </div>
+                <button class="tovar__btn shop_btn">Shop Now</button>
+            </div>
+        </div>
+        </div>
+        <div class="dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+        </div>
     </section>
+
 
 
     <section class="discount">
@@ -323,6 +341,8 @@ Starlight Aluminium </div>
             <button class="sale__btn shop_btn">Shop Now</button>
         </div>
     </section>
+
+
 
     <script src="./js/script.js"></script>
 </body>

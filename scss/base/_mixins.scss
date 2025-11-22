@@ -79,3 +79,44 @@
         transform: scale(0.98);
     }
 }
+
+.memory_btn {
+    background: none;
+    width: 122px;
+    height: 45px;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.phone__shop-btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 8;
+    padding: 16px 56px 16px 56px;
+    background: none;
+    border: 1px solid black;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+@mixin btn_up-animation {
+    &:hover {
+        box-shadow: 0 0 20px black; 
+        transform: translateY(-3px);
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+}
+

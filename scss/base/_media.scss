@@ -46,6 +46,7 @@
       }
     }
   }
+
 }
   .header {
     padding: 12px 60px;
@@ -113,6 +114,16 @@
       }
     }
   }
+  .phone {
+    margin-block: 40px;
+    .phone__items {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -167,14 +178,30 @@
       }
     }
   }
+
   .tovar {
-    .tovar__items {
-      .tovar__item {
-        padding: 0 28px 50px 28px;
+    .dots {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        background: var(--dark-gray); // используем твой цвет
+        border-radius: 50%;
+        cursor: pointer;
+
+        &.active {
+          background: black; // активная точка можно белой для контраста
+        }
       }
     }
   }
+  
 }
+
 
 @media screen and (max-width: 576px) {
   .container {
@@ -246,17 +273,57 @@
       }
     }
   }
+  @media screen and (max-width: 576px) {
   .tovar {
+    position: relative; // чтобы точки правильно позиционировались
+
     .tovar__items {
-      grid-template-columns: repeat(1, 1fr);
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 0;
+
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
       .tovar__item {
+        min-width: 100%;
+        scroll-snap-align: start;
+        padding: 0 16px 40px 16px;
         img {
           width: 300px;
           height: 300px;
         }
       }
     }
+
+    /* точки под слайдером */
+    .dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      position: relative; // остаются под слайдером
+      z-index: 10;
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        background: var(--light-gray);
+        border-radius: 100%;
+        cursor: pointer;
+
+        &.active {
+          background: black;
+        }
+      }
+    }
   }
+}
   .discount {
     .discount__items {
       .discount__items-content {
@@ -278,6 +345,62 @@
       }
       .sale__subtitle {
         text-align: center;
+      }
+    }
+  }
+  .phone {
+    margin-block: 10px;
+    .phone__items {
+      .left {
+        margin-top: 20px;
+        img {
+          width: 230px;
+          height: 300px;
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .phone__title {
+          font-size: 24px;
+        }
+        .phone__price {
+          font-size: 20px;
+          margin-top: 8px;
+          .dis__price {
+            display: none;
+          }
+        }
+        .memories {
+          gap: 8px;
+          margin-top: 10px;
+          .memory_btn {
+            width: 68px;
+            height: 40px;
+            font-size: 12px;
+            font-weight: 400;
+            text-align: center;
+          }
+        }
+        .about__phone {
+          gap: 10px;
+          grid-template-columns: repeat(2, 1fr);
+          .about__card {
+            display: flex;
+            gap: 4px;
+            width: 150px;
+            padding: 10px 4px;
+          }
+        }
+        .btns {
+          display: flex;
+          flex-direction: column;
+          .phone__shop-btn {
+            max-width: 100%;
+          }
+        }
       }
     }
   }
