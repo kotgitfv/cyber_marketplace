@@ -1,0 +1,85 @@
+.phones {
+    margin-block: 40px;
+    .phones__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 36px;
+        .product__content-item {
+                padding: 24px 16px;
+                background-color: var(--light);
+                padding: 16px 24px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                border-radius: 8px;
+                img {
+                    width: 160px;
+                    height: 160px;
+                }
+                .heart {
+                    margin-left: auto;
+                    font-size: 20px;
+                    color: var(--light-gray);
+                    cursor: pointer;
+                    transition: color 0.2s ease, transform 0.2s ease;
+                    &.active {
+                        color: red;
+                        animation: pulse 1.5s infinite;
+                    }
+                    @keyframes pulse {
+                        0% {
+                            transform: scale(1);
+                        }
+                        50% {
+                            transform: scale(1.1);
+                        }
+                        100% {
+                            transform: scale(1);
+                        }
+                    }
+                }
+
+                .item__text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .device__name {
+                        color: var(--black);
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 24px;
+                        text-align: center;
+                    }
+                    .divice__value {
+                        color: var(--black);
+                        font-size: 24px;
+                        font-weight: 600;
+                        line-height: 24px;
+                        letter-spacing: 3%;
+                        text-align: center;
+                        margin-top: 16px;
+                    }
+                }
+                .device__btn {
+                    background-color: var(--black);
+                    color: var(--light);
+                    padding: 12px 64px;
+                    border-radius: 8px;
+                    max-width: 100%;
+                    margin-top: 24px;
+                    border: 1.3px solid var(--black);
+                    transition: 0.3s all;
+                    &:hover {
+                        color: var(--black);
+                        background: none;
+                    }
+                    &:active {
+                        transform: scale(0.98);
+                    }
+                }
+            }
+    }
+}
